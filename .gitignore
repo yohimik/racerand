@@ -1,0 +1,8 @@
+BENCHMARKS.quick.md
+*.bin
+*.prof
+.DS_Store
+*.test
+coverage.out
+/racerand
+/racerand-bench

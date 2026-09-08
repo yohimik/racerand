@@ -1,0 +1,1904 @@
+{
+  "Machine": {
+    "OS": "darwin",
+    "Arch": "arm64",
+    "CPU": "Apple M5 Pro",
+    "NumCPU": 15,
+    "GOMAXPROCS": 15,
+    "GoVersion": "go1.26.5"
+  },
+  "Generated": "2026-09-08T18:43:23.044009+04:00",
+  "Config": {
+    "noise_bytes": 1048576,
+    "noise_generated": "2026-09-08T18:44:41+04:00",
+    "quality_bytes": 1048576,
+    "sweep_samples": 65536,
+    "throughput_dur": "1s"
+  },
+  "Throughput": [
+    {
+      "Name": "racerand raw (atomic)",
+      "Family": "racerand",
+      "MBps64": 3.0996927543641193,
+      "MBps64K": 3.1174899073537654,
+      "Err": ""
+    },
+    {
+      "Name": "racerand raw (unsynchronized)",
+      "Family": "racerand",
+      "MBps64": 3.269476755076169,
+      "MBps64K": 3.232888219210792,
+      "Err": ""
+    },
+    {
+      "Name": "racerand TRNG (H=0.5 default)",
+      "Family": "racerand",
+      "MBps64": 0.09630498538033716,
+      "MBps64K": 0.09253148411067488,
+      "Err": ""
+    },
+    {
+      "Name": "racerand TRNG (H=2 assumed)",
+      "Family": "racerand",
+      "MBps64": 0.38429769349978854,
+      "MBps64K": 0.38762865582101047,
+      "Err": ""
+    },
+    {
+      "Name": "racerand DRBG ChaCha8",
+      "Family": "racerand",
+      "MBps64": 817.7214500651238,
+      "MBps64K": 966.1180758094611,
+      "Err": ""
+    },
+    {
+      "Name": "racerand DRBG AES-256-CTR",
+      "Family": "racerand",
+      "MBps64": 944.2489023569965,
+      "MBps64K": 1052.9588327020783,
+      "Err": ""
+    },
+    {
+      "Name": "racerand DRBG ChaCha8 + OS mix",
+      "Family": "racerand",
+      "MBps64": 679.3607296167031,
+      "MBps64K": 716.6537954266169,
+      "Err": ""
+    },
+    {
+      "Name": "crypto/rand",
+      "Family": "stdlib",
+      "MBps64": 360.55841172079414,
+      "MBps64K": 5167.976301226418,
+      "Err": ""
+    },
+    {
+      "Name": "math/rand/v2 ChaCha8",
+      "Family": "stdlib",
+      "MBps64": 2073.219367788899,
+      "MBps64K": 2361.0986420598147,
+      "Err": ""
+    },
+    {
+      "Name": "math/rand/v2 PCG",
+      "Family": "stdlib",
+      "MBps64": 2247.8914949042646,
+      "MBps64K": 2345.549034569956,
+      "Err": ""
+    },
+    {
+      "Name": "math/rand (v1)",
+      "Family": "stdlib",
+      "MBps64": 1427.969954045069,
+      "MBps64K": 1599.0781329539516,
+      "Err": ""
+    },
+    {
+      "Name": "jitter raw",
+      "Family": "jitter",
+      "MBps64": 7.165988449714257,
+      "MBps64K": 7.245624901875366,
+      "Err": ""
+    },
+    {
+      "Name": "jitter conditioned (SHA-512, 2048/block)",
+      "Family": "jitter",
+      "MBps64": 0.21320258709821352,
+      "MBps64K": 0.21540065001178987,
+      "Err": ""
+    }
+  ],
+  "Uint64": [
+    {
+      "Name": "racerand DRBG ChaCha8",
+      "NsPerOp": 16.659921954292397,
+      "Err": ""
+    },
+    {
+      "Name": "racerand DRBG AES-256-CTR",
+      "NsPerOp": 25.876939725149708,
+      "Err": ""
+    },
+    {
+      "Name": "crypto/rand",
+      "NsPerOp": 52.12219201826805,
+      "Err": ""
+    },
+    {
+      "Name": "math/rand/v2 ChaCha8",
+      "NsPerOp": 3.638991829322302,
+      "Err": ""
+    },
+    {
+      "Name": "math/rand/v2 PCG",
+      "NsPerOp": 3.2246140345414616,
+      "Err": ""
+    },
+    {
+      "Name": "math/rand (v1)",
+      "NsPerOp": 2.3103769352903516,
+      "Err": ""
+    }
+  ],
+  "Quality": [
+    {
+      "Name": "racerand raw (atomic)",
+      "Report": {
+        "Bytes": 1048576,
+        "ShannonEntropy": 6.084181287895441,
+        "MinEntropyByte": 5.145082551789666,
+        "MinEntropyBit": 0.594446236152515,
+        "MarkovMinEntropy": 0.5316408823702059,
+        "CondMinEntropy": 4.508489962268416,
+        "ChiSquare": 3908639.171875,
+        "ChiSquareP": 0,
+        "Mean": 25.580513954162598,
+        "MonteCarloPi": 3.9987411451001935,
+        "MonteCarloPiErrPct": 27.283883877528343,
+        "SerialCorrelation": 0.04163208601166599,
+        "CompressionRatio": 0.7585086822509766
+      },
+      "NIST": [
+        {
+          "Name": "Frequency (Monobit)",
+          "P": 0,
+          "Pass": false,
+          "Note": ""
+        },
+        {
+          "Name": "Block Frequency (M=128)",
+          "P": 0,
+          "Pass": false,
+          "Note": ""
+        },
+        {
+          "Name": "Runs",
+          "P": 0,
+          "Pass": false,
+          "Note": ""
+        },
+        {
+          "Name": "Longest Run of Ones",
+          "P": 0,
+          "Pass": false,
+          "Note": ""
+        },
+        {
+          "Name": "Binary Matrix Rank",
+          "P": 0,
+          "Pass": false,
+          "Note": ""
+        },
+        {
+          "Name": "Cumulative Sums (fwd)",
+          "P": 0,
+          "Pass": false,
+          "Note": ""
+        },
+        {
+          "Name": "Cumulative Sums (bwd)",
+          "P": 0,
+          "Pass": false,
+          "Note": ""
+        },
+        {
+          "Name": "Approximate Entropy (m=2)",
+          "P": 0,
+          "Pass": false,
+          "Note": ""
+        },
+        {
+          "Name": "Serial (m=3) P1",
+          "P": 0,
+          "Pass": false,
+          "Note": ""
+        },
+        {
+          "Name": "Serial (m=3) P2",
+          "P": 0,
+          "Pass": false,
+          "Note": ""
+        },
+        {
+          "Name": "Maurer's Universal",
+          "P": 0,
+          "Pass": false,
+          "Note": ""
+        }
+      ],
+      "Passed": 0,
+      "Total": 11,
+      "Err": ""
+    },
+    {
+      "Name": "racerand raw (unsynchronized)",
+      "Report": {
+        "Bytes": 1048576,
+        "ShannonEntropy": 6.062589481069536,
+        "MinEntropyByte": 4.771204182132574,
+        "MinEntropyBit": 0.5817131379882735,
+        "MarkovMinEntropy": 0.5163211992295057,
+        "CondMinEntropy": 4.515553316366493,
+        "ChiSquare": 4292378.854003906,
+        "ChiSquareP": 0,
+        "Mean": 25.190248489379883,
+        "MonteCarloPi": 3.9999084469163777,
+        "MonteCarloPiErrPct": 27.321040248353512,
+        "SerialCorrelation": -0.06643180130134195,
+        "CompressionRatio": 0.7601680755615234
+      },
+      "NIST": [
+        {
+          "Name": "Frequency (Monobit)",
+          "P": 0,
+          "Pass": false,
+          "Note": ""
+        },
+        {
+          "Name": "Block Frequency (M=128)",
+          "P": 0,
+          "Pass": false,
+          "Note": ""
+        },
+        {
+          "Name": "Runs",
+          "P": 0,
+          "Pass": false,
+          "Note": ""
+        },
+        {
+          "Name": "Longest Run of Ones",
+          "P": 0,
+          "Pass": false,
+          "Note": ""
+        },
+        {
+          "Name": "Binary Matrix Rank",
+          "P": 0,
+          "Pass": false,
+          "Note": ""
+        },
+        {
+          "Name": "Cumulative Sums (fwd)",
+          "P": 0,
+          "Pass": false,
+          "Note": ""
+        },
+        {
+          "Name": "Cumulative Sums (bwd)",
+          "P": 0,
+          "Pass": false,
+          "Note": ""
+        },
+        {
+          "Name": "Approximate Entropy (m=2)",
+          "P": 0,
+          "Pass": false,
+          "Note": ""
+        },
+        {
+          "Name": "Serial (m=3) P1",
+          "P": 0,
+          "Pass": false,
+          "Note": ""
+        },
+        {
+          "Name": "Serial (m=3) P2",
+          "P": 0,
+          "Pass": false,
+          "Note": ""
+        },
+        {
+          "Name": "Maurer's Universal",
+          "P": 0,
+          "Pass": false,
+          "Note": ""
+        }
+      ],
+      "Passed": 0,
+      "Total": 11,
+      "Err": ""
+    },
+    {
+      "Name": "racerand TRNG (H=0.5 default)",
+      "Report": {
+        "Bytes": 1048576,
+        "ShannonEntropy": 7.999835651194301,
+        "MinEntropyByte": 7.885968690132658,
+        "MinEntropyBit": 0.9982535601791401,
+        "MarkovMinEntropy": 0.9996725062489025,
+        "CondMinEntropy": 7.17523872518403,
+        "ChiSquare": 238.98876953125,
+        "ChiSquareP": 0.7563824378285225,
+        "Mean": 127.44553661346436,
+        "MonteCarloPi": 3.1456724001785283,
+        "MonteCarloPiErrPct": 0.1298623672319017,
+        "SerialCorrelation": 0.000022337767787498862,
+        "CompressionRatio": 1.000309944152832
+      },
+      "NIST": [
+        {
+          "Name": "Frequency (Monobit)",
+          "P": 0.3512224002375903,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Block Frequency (M=128)",
+          "P": 0.1547170438142936,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Runs",
+          "P": 0.5071943225553813,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Longest Run of Ones",
+          "P": 0.9197794506252189,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Binary Matrix Rank",
+          "P": 0.2062967022402026,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Cumulative Sums (fwd)",
+          "P": 0.6717769200581443,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Cumulative Sums (bwd)",
+          "P": 0.4696945922998461,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Approximate Entropy (m=2)",
+          "P": 0.51494767957065,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Serial (m=3) P1",
+          "P": 0.5151720106588633,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Serial (m=3) P2",
+          "P": 0.3767625908931209,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Maurer's Universal",
+          "P": 0.39912778675489047,
+          "Pass": true,
+          "Note": ""
+        }
+      ],
+      "Passed": 11,
+      "Total": 11,
+      "Err": ""
+    },
+    {
+      "Name": "racerand TRNG (H=2 assumed)",
+      "Report": {
+        "Bytes": 1048576,
+        "ShannonEntropy": 7.999820555953977,
+        "MinEntropyByte": 7.887961071080611,
+        "MinEntropyBit": 0.9984342783191701,
+        "MarkovMinEntropy": 0.9988484502471559,
+        "CondMinEntropy": 7.181616169096982,
+        "ChiSquare": 260.61474609375,
+        "ChiSquareP": 0.39116046999140375,
+        "Mean": 127.49242210388184,
+        "MonteCarloPi": 3.141026081184697,
+        "MonteCarloPiErrPct": 0.018034559778107258,
+        "SerialCorrelation": 0.0006230224364970816,
+        "CompressionRatio": 1.000309944152832
+      },
+      "NIST": [
+        {
+          "Name": "Frequency (Monobit)",
+          "P": 0.5693561480966449,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Block Frequency (M=128)",
+          "P": 0.9728646502942737,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Runs",
+          "P": 0.019734672364522084,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Longest Run of Ones",
+          "P": 0.18024216839206897,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Binary Matrix Rank",
+          "P": 0.27898301336993153,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Cumulative Sums (fwd)",
+          "P": 0.42209164122528015,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Cumulative Sums (bwd)",
+          "P": 0.8994627464997473,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Approximate Entropy (m=2)",
+          "P": 0.19475861390748875,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Serial (m=3) P1",
+          "P": 0.19484599206765607,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Serial (m=3) P2",
+          "P": 0.8608297969727081,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Maurer's Universal",
+          "P": 0.8365227222272584,
+          "Pass": true,
+          "Note": ""
+        }
+      ],
+      "Passed": 11,
+      "Total": 11,
+      "Err": ""
+    },
+    {
+      "Name": "racerand DRBG ChaCha8",
+      "Report": {
+        "Bytes": 1048576,
+        "ShannonEntropy": 7.9998099224122825,
+        "MinEntropyByte": 7.879677753792343,
+        "MinEntropyBit": 0.9979361557863875,
+        "MarkovMinEntropy": 0.9992425234157505,
+        "CondMinEntropy": 7.17384740933793,
+        "ChiSquare": 276.267578125,
+        "ChiSquareP": 0.17205046419497397,
+        "Mean": 127.50788116455078,
+        "MonteCarloPi": 3.1416440644991472,
+        "MonteCarloPiErrPct": 0.0016364600705115599,
+        "SerialCorrelation": 0.00038424227125756375,
+        "CompressionRatio": 1.000309944152832
+      },
+      "NIST": [
+        {
+          "Name": "Frequency (Monobit)",
+          "P": 0.11635132473543625,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Block Frequency (M=128)",
+          "P": 0.43803256650887046,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Runs",
+          "P": 0.12506970843936088,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Longest Run of Ones",
+          "P": 0.6602105054487681,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Binary Matrix Rank",
+          "P": 0.010068870487523106,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Cumulative Sums (fwd)",
+          "P": 0.18044429514038599,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Cumulative Sums (bwd)",
+          "P": 0.21982194544826728,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Approximate Entropy (m=2)",
+          "P": 0.26895808745432404,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Serial (m=3) P1",
+          "P": 0.26945424662606887,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Serial (m=3) P2",
+          "P": 0.8340878791127938,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Maurer's Universal",
+          "P": 0.446616069537096,
+          "Pass": true,
+          "Note": ""
+        }
+      ],
+      "Passed": 11,
+      "Total": 11,
+      "Err": ""
+    },
+    {
+      "Name": "racerand DRBG AES-256-CTR",
+      "Report": {
+        "Bytes": 1048576,
+        "ShannonEntropy": 7.999848975879268,
+        "MinEntropyByte": 7.887296635293635,
+        "MinEntropyBit": 0.9984968134464443,
+        "MarkovMinEntropy": 0.999413874233863,
+        "CondMinEntropy": 7.172457433965635,
+        "ChiSquare": 219.58984375,
+        "ChiSquareP": 0.9470822076420052,
+        "Mean": 127.5245008468628,
+        "MonteCarloPi": 3.1427655897735205,
+        "MonteCarloPiErrPct": 0.03733571831431121,
+        "SerialCorrelation": 0.0009446125885106769,
+        "CompressionRatio": 1.000309944152832
+      },
+      "NIST": [
+        {
+          "Name": "Frequency (Monobit)",
+          "P": 0.6575322621141858,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Block Frequency (M=128)",
+          "P": 0.5505877042092526,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Runs",
+          "P": 0.4596070587982475,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Longest Run of Ones",
+          "P": 0.3236633027274486,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Binary Matrix Rank",
+          "P": 0.792890058884182,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Cumulative Sums (fwd)",
+          "P": 0.5912656654216921,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Cumulative Sums (bwd)",
+          "P": 0.7209841626902442,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Approximate Entropy (m=2)",
+          "P": 0.7513162737340886,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Serial (m=3) P1",
+          "P": 0.7511301010022904,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Serial (m=3) P2",
+          "P": 0.556576919458902,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Maurer's Universal",
+          "P": 0.06793556036555629,
+          "Pass": true,
+          "Note": ""
+        }
+      ],
+      "Passed": 11,
+      "Total": 11,
+      "Err": ""
+    },
+    {
+      "Name": "racerand DRBG ChaCha8 + OS mix",
+      "Report": {
+        "Bytes": 1048576,
+        "ShannonEntropy": 7.999800686619838,
+        "MinEntropyByte": 7.8753893357567675,
+        "MinEntropyBit": 0.9985741271070087,
+        "MarkovMinEntropy": 0.9992481827990058,
+        "CondMinEntropy": 7.17186213994403,
+        "ChiSquare": 289.51220703125,
+        "ChiSquareP": 0.06765750861671448,
+        "Mean": 127.46291255950928,
+        "MonteCarloPi": 3.142056053375448,
+        "MonteCarloPiErrPct": 0.014750473302933527,
+        "SerialCorrelation": 0.00023023997647367208,
+        "CompressionRatio": 1.000309944152832
+      },
+      "NIST": [
+        {
+          "Name": "Frequency (Monobit)",
+          "P": 0.7733829734063917,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Block Frequency (M=128)",
+          "P": 0.5490494919716662,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Runs",
+          "P": 0.12801772430882125,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Longest Run of Ones",
+          "P": 0.19660232273111808,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Binary Matrix Rank",
+          "P": 0.21979990402139007,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Cumulative Sums (fwd)",
+          "P": 0.4857671141600171,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Cumulative Sums (bwd)",
+          "P": 0.7423730317503139,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Approximate Entropy (m=2)",
+          "P": 0.5536731195815645,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Serial (m=3) P1",
+          "P": 0.5537724292734179,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Serial (m=3) P2",
+          "P": 0.7315938254267034,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Maurer's Universal",
+          "P": 0.6583732652747043,
+          "Pass": true,
+          "Note": ""
+        }
+      ],
+      "Passed": 11,
+      "Total": 11,
+      "Err": ""
+    },
+    {
+      "Name": "crypto/rand",
+      "Report": {
+        "Bytes": 1048576,
+        "ShannonEntropy": 7.999840469516556,
+        "MinEntropyByte": 7.891287893620145,
+        "MinEntropyBit": 0.9985191480779899,
+        "MarkovMinEntropy": 0.9998817532580504,
+        "CondMinEntropy": 7.17186213994403,
+        "ChiSquare": 231.93798828125,
+        "ChiSquareP": 0.847074716663988,
+        "Mean": 127.45301628112793,
+        "MonteCarloPi": 3.1383481534887445,
+        "MonteCarloPiErrPct": 0.10327564578880763,
+        "SerialCorrelation": -0.0015368161286503708,
+        "CompressionRatio": 1.000309944152832
+      },
+      "NIST": [
+        {
+          "Name": "Frequency (Monobit)",
+          "P": 0.6903072792045888,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Block Frequency (M=128)",
+          "P": 0.1575378557513914,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Runs",
+          "P": 0.8710457573473074,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Longest Run of Ones",
+          "P": 0.14549851403859826,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Binary Matrix Rank",
+          "P": 0.8769936209464191,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Cumulative Sums (fwd)",
+          "P": 0.7339549711491631,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Cumulative Sums (bwd)",
+          "P": 0.9512522157389557,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Approximate Entropy (m=2)",
+          "P": 0.18418025530278412,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Serial (m=3) P1",
+          "P": 0.1841198901856385,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Serial (m=3) P2",
+          "P": 0.04920594040034873,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Maurer's Universal",
+          "P": 0.4695932821299962,
+          "Pass": true,
+          "Note": ""
+        }
+      ],
+      "Passed": 11,
+      "Total": 11,
+      "Err": ""
+    },
+    {
+      "Name": "math/rand/v2 ChaCha8",
+      "Report": {
+        "Bytes": 1048576,
+        "ShannonEntropy": 7.999823424550407,
+        "MinEntropyByte": 7.884641978272409,
+        "MinEntropyBit": 0.9982978786906918,
+        "MarkovMinEntropy": 0.999034918258055,
+        "CondMinEntropy": 7.171068796486651,
+        "ChiSquare": 256.69140625,
+        "ChiSquareP": 0.4584888309802134,
+        "Mean": 127.45505428314209,
+        "MonteCarloPi": 3.1442304391114773,
+        "MonteCarloPiErrPct": 0.08396332091845309,
+        "SerialCorrelation": 0.0006264809683886935,
+        "CompressionRatio": 1.000309944152832
+      },
+      "NIST": [
+        {
+          "Name": "Frequency (Monobit)",
+          "P": 0.39914904703093157,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Block Frequency (M=128)",
+          "P": 0.06471460893907365,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Runs",
+          "P": 0.2696285108318295,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Longest Run of Ones",
+          "P": 0.7162675300512746,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Binary Matrix Rank",
+          "P": 0.8202240423340423,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Cumulative Sums (fwd)",
+          "P": 0.34865741904276426,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Cumulative Sums (bwd)",
+          "P": 0.7655786010976842,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Approximate Entropy (m=2)",
+          "P": 0.5090487472436834,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Serial (m=3) P1",
+          "P": 0.5085609064567489,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Serial (m=3) P2",
+          "P": 0.5039005228366529,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Maurer's Universal",
+          "P": 0.7977829964932706,
+          "Pass": true,
+          "Note": ""
+        }
+      ],
+      "Passed": 11,
+      "Total": 11,
+      "Err": ""
+    },
+    {
+      "Name": "math/rand/v2 PCG",
+      "Report": {
+        "Bytes": 1048576,
+        "ShannonEntropy": 7.99979371449648,
+        "MinEntropyByte": 7.885305180183484,
+        "MinEntropyBit": 0.998443555336994,
+        "MarkovMinEntropy": 0.9988845712562751,
+        "CondMinEntropy": 7.175039883609615,
+        "ChiSquare": 299.73583984375,
+        "ChiSquareP": 0.028403733365105203,
+        "Mean": 127.43760204315186,
+        "MonteCarloPi": 3.13935523740859,
+        "MonteCarloPiErrPct": 0.0712191689984601,
+        "SerialCorrelation": -0.0006479435813355329,
+        "CompressionRatio": 1.000309944152832
+      },
+      "NIST": [
+        {
+          "Name": "Frequency (Monobit)",
+          "P": 0.5820755157144287,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Block Frequency (M=128)",
+          "P": 0.7322873784024371,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Runs",
+          "P": 0.0884852380972588,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Longest Run of Ones",
+          "P": 0.25570214148724335,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Binary Matrix Rank",
+          "P": 0.09063030940837846,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Cumulative Sums (fwd)",
+          "P": 0.7426965044385043,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Cumulative Sums (bwd)",
+          "P": 0.5072615532260288,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Approximate Entropy (m=2)",
+          "P": 0.24475223596151807,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Serial (m=3) P1",
+          "P": 0.24498919757449544,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Serial (m=3) P2",
+          "P": 0.32735722542396606,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Maurer's Universal",
+          "P": 0.5461502077547424,
+          "Pass": true,
+          "Note": ""
+        }
+      ],
+      "Passed": 11,
+      "Total": 11,
+      "Err": ""
+    },
+    {
+      "Name": "math/rand (v1)",
+      "Report": {
+        "Bytes": 1048576,
+        "ShannonEntropy": 7.999860968974456,
+        "MinEntropyByte": 7.88397908411285,
+        "MinEntropyBit": 0.9986294518717777,
+        "MarkovMinEntropy": 0.9997786942518238,
+        "CondMinEntropy": 7.164737705510649,
+        "ChiSquare": 202.1455078125,
+        "ChiSquareP": 0.9937015884077028,
+        "Mean": 127.43622589111328,
+        "MonteCarloPi": 3.1430173607534817,
+        "MonteCarloPiErrPct": 0.04534983751189456,
+        "SerialCorrelation": 0.000049025459221529956,
+        "CompressionRatio": 1.000309944152832
+      },
+      "NIST": [
+        {
+          "Name": "Frequency (Monobit)",
+          "P": 0.8596837951986662,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Block Frequency (M=128)",
+          "P": 0.31202191461700646,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Runs",
+          "P": 0.6540324350331754,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Longest Run of Ones",
+          "P": 0.7204920160383008,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Binary Matrix Rank",
+          "P": 0.9292230630219417,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Cumulative Sums (fwd)",
+          "P": 0.9242614966007805,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Cumulative Sums (bwd)",
+          "P": 0.7802772234004411,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Approximate Entropy (m=2)",
+          "P": 0.9287922199727902,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Serial (m=3) P1",
+          "P": 0.9287825178716491,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Serial (m=3) P2",
+          "P": 0.7265759701003123,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Maurer's Universal",
+          "P": 0.09950365112044807,
+          "Pass": true,
+          "Note": ""
+        }
+      ],
+      "Passed": 11,
+      "Total": 11,
+      "Err": ""
+    },
+    {
+      "Name": "jitter raw",
+      "Report": {
+        "Bytes": 1048576,
+        "ShannonEntropy": 1.4713639253908957,
+        "MinEntropyByte": 0.7826932923043619,
+        "MinEntropyBit": 0.6688506992295368,
+        "MarkovMinEntropy": 0.6844383312597042,
+        "CondMinEntropy": 0.7851601605781802,
+        "ChiSquare": 114105936.82177734,
+        "ChiSquareP": 0,
+        "Mean": 108.39050769805908,
+        "MonteCarloPi": 3.9944839267117564,
+        "MonteCarloPiErrPct": 27.148372407460048,
+        "SerialCorrelation": 0.1465579165071166,
+        "CompressionRatio": 0.11531925201416016
+      },
+      "NIST": [
+        {
+          "Name": "Frequency (Monobit)",
+          "P": 0,
+          "Pass": false,
+          "Note": ""
+        },
+        {
+          "Name": "Block Frequency (M=128)",
+          "P": 0,
+          "Pass": false,
+          "Note": ""
+        },
+        {
+          "Name": "Runs",
+          "P": 0,
+          "Pass": false,
+          "Note": ""
+        },
+        {
+          "Name": "Longest Run of Ones",
+          "P": 0,
+          "Pass": false,
+          "Note": ""
+        },
+        {
+          "Name": "Binary Matrix Rank",
+          "P": 0,
+          "Pass": false,
+          "Note": ""
+        },
+        {
+          "Name": "Cumulative Sums (fwd)",
+          "P": 0,
+          "Pass": false,
+          "Note": ""
+        },
+        {
+          "Name": "Cumulative Sums (bwd)",
+          "P": 0,
+          "Pass": false,
+          "Note": ""
+        },
+        {
+          "Name": "Approximate Entropy (m=2)",
+          "P": 0,
+          "Pass": false,
+          "Note": ""
+        },
+        {
+          "Name": "Serial (m=3) P1",
+          "P": 0,
+          "Pass": false,
+          "Note": ""
+        },
+        {
+          "Name": "Serial (m=3) P2",
+          "P": 0,
+          "Pass": false,
+          "Note": ""
+        },
+        {
+          "Name": "Maurer's Universal",
+          "P": 0,
+          "Pass": false,
+          "Note": ""
+        }
+      ],
+      "Passed": 0,
+      "Total": 11,
+      "Err": ""
+    },
+    {
+      "Name": "jitter conditioned (SHA-512, 2048/block)",
+      "Report": {
+        "Bytes": 1048576,
+        "ShannonEntropy": 7.999832584019776,
+        "MinEntropyByte": 7.884641978272409,
+        "MinEntropyBit": 0.9984267193117556,
+        "MarkovMinEntropy": 0.9994082386472746,
+        "CondMinEntropy": 7.178623231765599,
+        "ChiSquare": 243.265625,
+        "ChiSquareP": 0.6908134368419927,
+        "Mean": 127.44385433197021,
+        "MonteCarloPi": 3.142674036689898,
+        "MonteCarloPiErrPct": 0.034421493151552345,
+        "SerialCorrelation": 0.001837512618779973,
+        "CompressionRatio": 1.000309944152832
+      },
+      "NIST": [
+        {
+          "Name": "Frequency (Monobit)",
+          "P": 0.559091321364691,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Block Frequency (M=128)",
+          "P": 0.5185442184440126,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Runs",
+          "P": 0.5430265738760116,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Longest Run of Ones",
+          "P": 0.721474065781164,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Binary Matrix Rank",
+          "P": 0.2706706096067821,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Cumulative Sums (fwd)",
+          "P": 0.7805953122365445,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Cumulative Sums (bwd)",
+          "P": 0.5445391134437871,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Approximate Entropy (m=2)",
+          "P": 0.669318757600031,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Serial (m=3) P1",
+          "P": 0.669392123535235,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Serial (m=3) P2",
+          "P": 0.4381473187969035,
+          "Pass": true,
+          "Note": ""
+        },
+        {
+          "Name": "Maurer's Universal",
+          "P": 0.008833624196339396,
+          "Pass": false,
+          "Note": ""
+        }
+      ],
+      "Passed": 10,
+      "Total": 11,
+      "Err": ""
+    }
+  ],
+  "Workers": [
+    {
+      "Label": "atomic w=1",
+      "Source": "atomic",
+      "Feedback": true,
+      "Workers": 1,
+      "Procs": 15,
+      "Samples": 65536,
+      "NsPerSample": 57.16831970214844,
+      "MCV": 4.600134080195047,
+      "Cond": 4.061868659833498,
+      "Shannon": 7.713816681576243,
+      "FoldMCV": 4.032020631152164,
+      "FoldShannon": 6.08500806074757,
+      "RateMbit": 80.46649095446773,
+      "SeedMicros": 58.540359375,
+      "CalMicros": 6.402851806640625,
+      "NewErr": ""
+    },
+    {
+      "Label": "atomic w=2",
+      "Source": "atomic",
+      "Feedback": true,
+      "Workers": 2,
+      "Procs": 15,
+      "Samples": 65536,
+      "NsPerSample": 85.04867553710938,
+      "MCV": 3.5975782605510105,
+      "Cond": 2.1082892001041658,
+      "Shannon": 6.97464739482076,
+      "FoldMCV": 3.4030519249343496,
+      "FoldShannon": 5.4352585529299935,
+      "RateMbit": 42.30022675639758,
+      "SeedMicros": 87.08984375,
+      "CalMicros": 12.16196060180664,
+      "NewErr": ""
+    },
+    {
+      "Label": "atomic w=3",
+      "Source": "atomic",
+      "Feedback": true,
+      "Workers": 3,
+      "Procs": 15,
+      "Samples": 65536,
+      "NsPerSample": 109.99488830566406,
+      "MCV": 4.974403875327558,
+      "Cond": 2.404254291951109,
+      "Shannon": 8.082613699115122,
+      "FoldMCV": 3.4009278138867627,
+      "FoldShannon": 5.459405309449389,
+      "RateMbit": 45.223954966927366,
+      "SeedMicros": 112.634765625,
+      "CalMicros": 11.329473495483398,
+      "NewErr": ""
+    },
+    {
+      "Label": "atomic w=4",
+      "Source": "atomic",
+      "Feedback": true,
+      "Workers": 4,
+      "Procs": 15,
+      "Samples": 65536,
+      "NsPerSample": 134.9232940673828,
+      "MCV": 5.875648477155347,
+      "Cond": 2.449591919521451,
+      "Shannon": 9.451998538075987,
+      "FoldMCV": 3.68346735545743,
+      "FoldShannon": 5.881729787830145,
+      "RateMbit": 43.54806571962997,
+      "SeedMicros": 138.161453125,
+      "CalMicros": 11.873249877929688,
+      "NewErr": ""
+    },
+    {
+      "Label": "atomic w=6",
+      "Source": "atomic",
+      "Feedback": true,
+      "Workers": 6,
+      "Procs": 15,
+      "Samples": 65536,
+      "NsPerSample": 168.96438598632812,
+      "MCV": 5.931815646495866,
+      "Cond": 2.2785583290074323,
+      "Shannon": 10.1814758364148,
+      "FoldMCV": 3.9660554853452514,
+      "FoldShannon": 5.965293289323677,
+      "RateMbit": 35.106899077394,
+      "SeedMicros": 173.01953125,
+      "CalMicros": 14.699901580810547,
+      "NewErr": ""
+    },
+    {
+      "Label": "atomic w=8",
+      "Source": "atomic",
+      "Feedback": true,
+      "Workers": 8,
+      "Procs": 15,
+      "Samples": 65536,
+      "NsPerSample": 198.32737731933594,
+      "MCV": 4.829815012005329,
+      "Cond": 1.8576315633694047,
+      "Shannon": 9.853049957151336,
+      "FoldMCV": 4.261203453721516,
+      "FoldShannon": 6.139330208211807,
+      "RateMbit": 24.35273978452619,
+      "SeedMicros": 203.087234375,
+      "CalMicros": 21.221029373168946,
+      "NewErr": ""
+    },
+    {
+      "Label": "atomic w=12",
+      "Source": "atomic",
+      "Feedback": true,
+      "Workers": 12,
+      "Procs": 15,
+      "Samples": 65536,
+      "NsPerSample": 284.68768310546875,
+      "MCV": 6.3258014398608795,
+      "Cond": 1.750049765228543,
+      "Shannon": 11.490337070205529,
+      "FoldMCV": 4.942059179073747,
+      "FoldShannon": 6.237108178564919,
+      "RateMbit": 22.22014444340168,
+      "SeedMicros": 291.5201875,
+      "CalMicros": 23.05970233154297,
+      "NewErr": ""
+    },
+    {
+      "Label": "atomic w=14",
+      "Source": "atomic",
+      "Feedback": true,
+      "Workers": 14,
+      "Procs": 15,
+      "Samples": 65536,
+      "NsPerSample": 316.4100646972656,
+      "MCV": 6.119885180404234,
+      "Cond": 1.7716853740293956,
+      "Shannon": 10.982764987657001,
+      "FoldMCV": 4.494289560351193,
+      "FoldShannon": 6.267576373753349,
+      "RateMbit": 19.341626146625927,
+      "SeedMicros": 324.00390625,
+      "CalMicros": 26.578445434570312,
+      "NewErr": ""
+    },
+    {
+      "Label": "atomic w=15",
+      "Source": "atomic",
+      "Feedback": true,
+      "Workers": 15,
+      "Procs": 15,
+      "Samples": 65536,
+      "NsPerSample": 299.52430725097656,
+      "MCV": 6.739500441964157,
+      "Cond": 1.7768058586979971,
+      "Shannon": 11.52911043762346,
+      "FoldMCV": 4.817024138767399,
+      "FoldShannon": 6.251280546720004,
+      "RateMbit": 22.500679506845547,
+      "SeedMicros": 306.712890625,
+      "CalMicros": 22.76384735107422,
+      "NewErr": ""
+    },
+    {
+      "Label": "atomic w=30",
+      "Source": "atomic",
+      "Feedback": true,
+      "Workers": 30,
+      "Procs": 15,
+      "Samples": 65536,
+      "NsPerSample": 867.1773223876953,
+      "MCV": 7.105759295508474,
+      "Cond": 1.7095990864488813,
+      "Shannon": 11.961535104572414,
+      "FoldMCV": 4.960954761295497,
+      "FoldShannon": 6.319527625515191,
+      "RateMbit": 8.194124906245703,
+      "SeedMicros": 887.989578125,
+      "CalMicros": 63.303944534301756,
+      "NewErr": ""
+    }
+  ],
+  "Variants": [
+    {
+      "Label": "atomic fb=true w=1",
+      "Source": "atomic",
+      "Feedback": true,
+      "Workers": 1,
+      "Procs": 15,
+      "Samples": 65536,
+      "NsPerSample": 51.4678955078125,
+      "MCV": 4.0575657902012585,
+      "Cond": 3.9261711388742433,
+      "Shannon": 7.4919958191129785,
+      "FoldMCV": 3.8429459148862835,
+      "FoldShannon": 6.017083607650007,
+      "RateMbit": 78.8368311967476,
+      "SeedMicros": 52.703125,
+      "CalMicros": 6.5364227294921875,
+      "NewErr": ""
+    },
+    {
+      "Label": "atomic fb=true w=14",
+      "Source": "atomic",
+      "Feedback": true,
+      "Workers": 14,
+      "Procs": 15,
+      "Samples": 65536,
+      "NsPerSample": 309.0216369628906,
+      "MCV": 7.280463131933339,
+      "Cond": 1.7591866538907792,
+      "Shannon": 12.006205414278863,
+      "FoldMCV": 5.062419426907235,
+      "FoldShannon": 6.305338598968513,
+      "RateMbit": 23.559719647746302,
+      "SeedMicros": 316.43815625,
+      "CalMicros": 21.940536224365236,
+      "NewErr": ""
+    },
+    {
+      "Label": "atomic fb=false w=1",
+      "Source": "atomic",
+      "Feedback": false,
+      "Workers": 1,
+      "Procs": 15,
+      "Samples": 65536,
+      "NsPerSample": 49.43212890625,
+      "MCV": 1.6554445984645678,
+      "Cond": 0.3717318213718955,
+      "Shannon": 2.9453364406933704,
+      "FoldMCV": 1.6471825600259726,
+      "FoldShannon": 2.779591918894567,
+      "RateMbit": 33.489243435260185,
+      "SeedMicros": 50.6185,
+      "CalMicros": 15.3239599609375,
+      "NewErr": ""
+    },
+    {
+      "Label": "atomic fb=false w=14",
+      "Source": "atomic",
+      "Feedback": false,
+      "Workers": 14,
+      "Procs": 15,
+      "Samples": 65536,
+      "NsPerSample": 509.48143005371094,
+      "MCV": 7.53605635835808,
+      "Cond": 1.3620512685368145,
+      "Shannon": 12.688920570248632,
+      "FoldMCV": 5.189785937904225,
+      "FoldShannon": 6.682639676493555,
+      "RateMbit": 14.791621271777478,
+      "SeedMicros": 521.708984375,
+      "CalMicros": 34.644737243652344,
+      "NewErr": ""
+    },
+    {
+      "Label": "unsynchronized fb=true w=1",
+      "Source": "unsynchronized",
+      "Feedback": true,
+      "Workers": 1,
+      "Procs": 15,
+      "Samples": 65536,
+      "NsPerSample": 58.781951904296875,
+      "MCV": 3.959414424625111,
+      "Cond": 3.7411175546429796,
+      "Shannon": 7.017458144918281,
+      "FoldMCV": 3.4982684558528137,
+      "FoldShannon": 5.442891016248879,
+      "RateMbit": 67.35765479634718,
+      "SeedMicros": 60.19271875,
+      "CalMicros": 7.6416537475585935,
+      "NewErr": ""
+    },
+    {
+      "Label": "unsynchronized fb=true w=14",
+      "Source": "unsynchronized",
+      "Feedback": true,
+      "Workers": 14,
+      "Procs": 15,
+      "Samples": 65536,
+      "NsPerSample": 284.1364440917969,
+      "MCV": 5.826808234500791,
+      "Cond": 1.9226615401717095,
+      "Shannon": 11.346544650514632,
+      "FoldMCV": 4.420612008663606,
+      "FoldShannon": 5.966513352089548,
+      "RateMbit": 20.507078045286953,
+      "SeedMicros": 290.95571875,
+      "CalMicros": 25.004007080078125,
+      "NewErr": ""
+    },
+    {
+      "Label": "unsynchronized fb=false w=1",
+      "Source": "unsynchronized",
+      "Feedback": false,
+      "Workers": 1,
+      "Procs": 15,
+      "Samples": 65536,
+      "NsPerSample": 47.94883728027344,
+      "MCV": 2.2808636960689683,
+      "Cond": 2.097037662924461,
+      "Shannon": 4.668244216921793,
+      "FoldMCV": 2.0143428157914887,
+      "FoldShannon": 3.8359078571083596,
+      "RateMbit": 47.56869666592176,
+      "SeedMicros": 49.099609375,
+      "CalMicros": 10.788488388061523,
+      "NewErr": ""
+    },
+    {
+      "Label": "unsynchronized fb=false w=14",
+      "Source": "unsynchronized",
+      "Feedback": false,
+      "Workers": 14,
+      "Procs": 15,
+      "Samples": 65536,
+      "NsPerSample": 358.49635314941406,
+      "MCV": 7.2373476755407165,
+      "Cond": 0.5368048782181722,
+      "Shannon": 14.300026296118865,
+      "FoldMCV": 5.810040913372907,
+      "FoldShannon": 7.685948842972336,
+      "RateMbit": 20.188064988556064,
+      "SeedMicros": 367.100265625,
+      "CalMicros": 25.4532410736084,
+      "NewErr": ""
+    }
+  ],
+  "Procs": [
+    {
+      "Label": "GOMAXPROCS=1",
+      "Source": "atomic",
+      "Feedback": true,
+      "Workers": 1,
+      "Procs": 1,
+      "Samples": 64,
+      "NsPerSample": 24757958.34375,
+      "MCV": 4.161653263478769,
+      "Cond": -0,
+      "Shannon": 6,
+      "FoldMCV": 3.1143533918135535,
+      "FoldShannon": 5.769454882778696,
+      "RateMbit": 0.00016809355624953435,
+      "SeedMicros": 25352149.344,
+      "CalMicros": 3069986.834625,
+      "NewErr": "racerand: GOMAXPROCS must be at least 2 for goroutines to race"
+    },
+    {
+      "Label": "GOMAXPROCS=2",
+      "Source": "atomic",
+      "Feedback": true,
+      "Workers": 1,
+      "Procs": 2,
+      "Samples": 65536,
+      "NsPerSample": 53.2010498046875,
+      "MCV": 3.897986740960163,
+      "Cond": 3.8086102726337954,
+      "Shannon": 7.526443379403139,
+      "FoldMCV": 3.6872086786852267,
+      "FoldShannon": 6.053125350038636,
+      "RateMbit": 73.26898163232701,
+      "SeedMicros": 54.477875,
+      "CalMicros": 7.02253857421875,
+      "NewErr": ""
+    },
+    {
+      "Label": "GOMAXPROCS=3",
+      "Source": "atomic",
+      "Feedback": true,
+      "Workers": 2,
+      "Procs": 3,
+      "Samples": 65536,
+      "NsPerSample": 77.00028991699219,
+      "MCV": 3.042013684454344,
+      "Cond": 1.906973150902575,
+      "Shannon": 6.176163614746027,
+      "FoldMCV": 2.8877207766071256,
+      "FoldShannon": 4.943566450529584,
+      "RateMbit": 39.506522478469805,
+      "SeedMicros": 78.848296875,
+      "CalMicros": 13.01304899597168,
+      "NewErr": ""
+    },
+    {
+      "Label": "GOMAXPROCS=4",
+      "Source": "atomic",
+      "Feedback": true,
+      "Workers": 3,
+      "Procs": 4,
+      "Samples": 65536,
+      "NsPerSample": 100.19111633300781,
+      "MCV": 5.0837654830235435,
+      "Cond": 2.3208278088052867,
+      "Shannon": 7.572243416253146,
+      "FoldMCV": 3.1514065955064443,
+      "FoldShannon": 5.050959065652015,
+      "RateMbit": 50.74068110117169,
+      "SeedMicros": 102.595703125,
+      "CalMicros": 10.119302749633789,
+      "NewErr": ""
+    },
+    {
+      "Label": "GOMAXPROCS=8",
+      "Source": "atomic",
+      "Feedback": true,
+      "Workers": 7,
+      "Procs": 8,
+      "Samples": 65536,
+      "NsPerSample": 205.9459686279297,
+      "MCV": 6.2661120411748055,
+      "Cond": 2.1505728851049777,
+      "Shannon": 10.327813836998994,
+      "FoldMCV": 4.039746928918417,
+      "FoldShannon": 6.132841671347457,
+      "RateMbit": 30.425999998550186,
+      "SeedMicros": 210.888671875,
+      "CalMicros": 16.887569427490234,
+      "NewErr": ""
+    },
+    {
+      "Label": "GOMAXPROCS=15",
+      "Source": "atomic",
+      "Feedback": true,
+      "Workers": 14,
+      "Procs": 15,
+      "Samples": 65536,
+      "NsPerSample": 322.0609130859375,
+      "MCV": 6.1885878282284965,
+      "Cond": 1.7704080874998465,
+      "Shannon": 11.262676768951613,
+      "FoldMCV": 5.166798490285798,
+      "FoldShannon": 6.329871458910816,
+      "RateMbit": 19.215581825594455,
+      "SeedMicros": 329.790375,
+      "CalMicros": 26.731055786132814,
+      "NewErr": ""
+    }
+  ],
+  "Latency": [
+    {
+      "Name": "New() with defaults",
+      "Micros": 2094.85,
+      "Note": "startup checks, seed, worker start/stop",
+      "Err": ""
+    },
+    {
+      "Name": "Reseed() at assumed H=0.5",
+      "Micros": 674.0683399999999,
+      "Note": "worker start, harvest, SHA-512, worker stop",
+      "Err": ""
+    },
+    {
+      "Name": "Reseed() at assumed H=2",
+      "Micros": 440.61,
+      "Note": "worker start, harvest, SHA-512, worker stop",
+      "Err": ""
+    },
+    {
+      "Name": "Reseed() at assumed H=4",
+      "Micros": 405.26084000000003,
+      "Note": "worker start, harvest, SHA-512, worker stop",
+      "Err": ""
+    },
+    {
+      "Name": "TRNG Read(32), workers per call",
+      "Micros": 725.4891600000001,
+      "Note": "average per call; buffered TRNG block spans two calls",
+      "Err": ""
+    },
+    {
+      "Name": "TRNG Read(32), persistent workers",
+      "Micros": 324.04916,
+      "Note": "average per call; buffered TRNG block spans two calls",
+      "Err": ""
+    },
+    {
+      "Name": "DRBG Read(32)",
+      "Micros": 0.0226875,
+      "Note": "average per call; buffered TRNG block spans two calls",
+      "Err": ""
+    }
+  ],
+  "Noise": [
+    {
+      "Name": "racerand raw (atomic)",
+      "Family": "racerand",
+      "Hex": "40060015160f06131d221525140b00f1101313100c2d2712381d181800151818",
+      "Gray": "noise/racerand-raw-atomic-bytes.png",
+      "Bits": "noise/racerand-raw-atomic-bits.png",
+      "Lag": "noise/racerand-raw-atomic-lag.png",
+      "Err": ""
+    },
+    {
+      "Name": "racerand raw (unsynchronized)",
+      "Family": "racerand",
+      "Hex": "240c03221002033d0c1a3b06092c101f101e3711146418030304053017033d03",
+      "Gray": "noise/racerand-raw-unsynchronized-bytes.png",
+      "Bits": "noise/racerand-raw-unsynchronized-bits.png",
+      "Lag": "noise/racerand-raw-unsynchronized-lag.png",
+      "Err": ""
+    },
+    {
+      "Name": "racerand TRNG (H=0.5 default)",
+      "Family": "racerand",
+      "Hex": "33b14ad7172fc4abf497cafa429423de7c8543105dd6870544dbd61d820fc8fb",
+      "Gray": "noise/racerand-trng-h-0-5-default-bytes.png",
+      "Bits": "noise/racerand-trng-h-0-5-default-bits.png",
+      "Lag": "noise/racerand-trng-h-0-5-default-lag.png",
+      "Err": ""
+    },
+    {
+      "Name": "racerand TRNG (H=2 assumed)",
+      "Family": "racerand",
+      "Hex": "e5e3060baf4b035482c92bb4d124ab7b8f62319306c6ff0da8ca565df5c9b122",
+      "Gray": "noise/racerand-trng-h-2-assumed-bytes.png",
+      "Bits": "noise/racerand-trng-h-2-assumed-bits.png",
+      "Lag": "noise/racerand-trng-h-2-assumed-lag.png",
+      "Err": ""
+    },
+    {
+      "Name": "racerand DRBG ChaCha8",
+      "Family": "racerand",
+      "Hex": "0c5179f3169a868e1748ab73a226f02b621983fc3473e68cfeb1cc9d5d411df2",
+      "Gray": "noise/racerand-drbg-chacha8-bytes.png",
+      "Bits": "noise/racerand-drbg-chacha8-bits.png",
+      "Lag": "noise/racerand-drbg-chacha8-lag.png",
+      "Err": ""
+    },
+    {
+      "Name": "racerand DRBG AES-256-CTR",
+      "Family": "racerand",
+      "Hex": "7fc9528c7e1843c5346ad1bc33846d00a8d8d72c72b8b2521d7c69889913fe98",
+      "Gray": "noise/racerand-drbg-aes-256-ctr-bytes.png",
+      "Bits": "noise/racerand-drbg-aes-256-ctr-bits.png",
+      "Lag": "noise/racerand-drbg-aes-256-ctr-lag.png",
+      "Err": ""
+    },
+    {
+      "Name": "racerand DRBG ChaCha8 + OS mix",
+      "Family": "racerand",
+      "Hex": "a3287e2f3c0e5af8ed5ffeeca678ae04c6ab577ee50f67c076c0ddac6e9db04f",
+      "Gray": "noise/racerand-drbg-chacha8-os-mix-bytes.png",
+      "Bits": "noise/racerand-drbg-chacha8-os-mix-bits.png",
+      "Lag": "noise/racerand-drbg-chacha8-os-mix-lag.png",
+      "Err": ""
+    },
+    {
+      "Name": "crypto/rand",
+      "Family": "stdlib",
+      "Hex": "1f45b255aad6a7b4e4ccdbfe198e466d339b5b9a0feeaec19acd7cbb571859dd",
+      "Gray": "noise/crypto-rand-bytes.png",
+      "Bits": "noise/crypto-rand-bits.png",
+      "Lag": "noise/crypto-rand-lag.png",
+      "Err": ""
+    },
+    {
+      "Name": "math/rand/v2 ChaCha8",
+      "Family": "stdlib",
+      "Hex": "8886e67ac1077785e3d4b89b5213b639a3ee7a750f2af0f9170477812f25cd35",
+      "Gray": "noise/math-rand-v2-chacha8-bytes.png",
+      "Bits": "noise/math-rand-v2-chacha8-bits.png",
+      "Lag": "noise/math-rand-v2-chacha8-lag.png",
+      "Err": ""
+    },
+    {
+      "Name": "math/rand/v2 PCG",
+      "Family": "stdlib",
+      "Hex": "2b2423ec0834ef0cbb43757c902f471bf69bf7399c1003fee86666845555db17",
+      "Gray": "noise/math-rand-v2-pcg-bytes.png",
+      "Bits": "noise/math-rand-v2-pcg-bits.png",
+      "Lag": "noise/math-rand-v2-pcg-lag.png",
+      "Err": ""
+    },
+    {
+      "Name": "math/rand (v1)",
+      "Family": "stdlib",
+      "Hex": "635786839ed1bcd51f25ee2f5a214c6cf6aa2768e51944c572b9c1932ec47f82",
+      "Gray": "noise/math-rand-v1-bytes.png",
+      "Bits": "noise/math-rand-v1-bits.png",
+      "Lag": "noise/math-rand-v1-lag.png",
+      "Err": ""
+    },
+    {
+      "Name": "jitter raw",
+      "Family": "jitter",
+      "Hex": "8d859e3fbd3fc6c7cb73cb76fad14fd0d0fad076a6a7d1d0d0d0a7a7d1a6a7a6",
+      "Gray": "noise/jitter-raw-bytes.png",
+      "Bits": "noise/jitter-raw-bits.png",
+      "Lag": "noise/jitter-raw-lag.png",
+      "Err": ""
+    },
+    {
+      "Name": "jitter conditioned (SHA-512, 2048/block)",
+      "Family": "jitter",
+      "Hex": "b1bc00bd46d8acb26ab968af8f0b3bba19bb08925000a82df9dea45f7c19f8d2",
+      "Gray": "noise/jitter-conditioned-sha-512-2048-block-bytes.png",
+      "Bits": "noise/jitter-conditioned-sha-512-2048-block-bits.png",
+      "Lag": "noise/jitter-conditioned-sha-512-2048-block-lag.png",
+      "Err": ""
+    }
+  ],
+  "GoBench": "goos: darwin\ngoarch: arm64\npkg: github.com/yohimik/racerand\ncpu: Apple M5 Pro\nBenchmarkRead\nBenchmarkRead/racerand/drbg-chacha8\nBenchmarkRead/racerand/drbg-chacha8/32B\nBenchmarkRead/racerand/drbg-chacha8/32B-15     \t 7802094\t        56.73 ns/op\t 564.06 MB/s\t       0 B/op\t       0 allocs/op\nBenchmarkRead/racerand/drbg-chacha8/32B-15     \t 5000589\t        73.60 ns/op\t 434.80 MB/s\t       0 B/op\t       0 allocs/op\nBenchmarkRead/racerand/drbg-chacha8/32B-15     \t 7607956\t        46.79 ns/op\t 683.91 MB/s\t       0 B/op\t       0 allocs/op\nBenchmarkRead/racerand/drbg-chacha8/4096B\nBenchmarkRead/racerand/drbg-chacha8/4096B-15   \t   87620\t      4301 ns/op\t 952.40 MB/s\t       1 B/op\t       0 allocs/op\nBenchmarkRead/racerand/drbg-chacha8/4096B-15   \t   88244\t      3958 ns/op\t1034.89 MB/s\t       1 B/op\t       0 allocs/op\nBenchmarkRead/racerand/drbg-chacha8/4096B-15   \t   87061\t      4083 ns/op\t1003.07 MB/s\t       1 B/op\t       0 allocs/op\nBenchmarkRead/racerand/drbg-chacha8/65536B\nBenchmarkRead/racerand/drbg-chacha8/65536B-15  \t    6555\t     64935 ns/op\t1009.25 MB/s\t      27 B/op\t       0 allocs/op\nBenchmarkRead/racerand/drbg-chacha8/65536B-15  \t    5552\t     63882 ns/op\t1025.89 MB/s\t      23 B/op\t       0 allocs/op\nBenchmarkRead/racerand/drbg-chacha8/65536B-15  \t    6219\t     66025 ns/op\t 992.60 MB/s\t      23 B/op\t       0 allocs/op\nBenchmarkRead/racerand/drbg-aes-ctr\nBenchmarkRead/racerand/drbg-aes-ctr/32B\nBenchmarkRead/racerand/drbg-aes-ctr/32B-15     \t 8809503\t        40.06 ns/op\t 798.72 MB/s\t       0 B/op\t       0 allocs/op\nBenchmarkRead/racerand/drbg-aes-ctr/32B-15     \t 9693205\t        39.77 ns/op\t 804.59 MB/s\t       0 B/op\t       0 allocs/op\nBenchmarkRead/racerand/drbg-aes-ctr/32B-15     \t 9015532\t        41.24 ns/op\t 775.99 MB/s\t       0 B/op\t       0 allocs/op\nBenchmarkRead/racerand/drbg-aes-ctr/4096B\nBenchmarkRead/racerand/drbg-aes-ctr/4096B-15   \t  156512\t      2644 ns/op\t1549.15 MB/s\t       5 B/op\t       0 allocs/op\nBenchmarkRead/racerand/drbg-aes-ctr/4096B-15   \t  133066\t      2579 ns/op\t1588.10 MB/s\t       5 B/op\t       0 allocs/op\nBenchmarkRead/racerand/drbg-aes-ctr/4096B-15   \t  144842\t      2598 ns/op\t1576.66 MB/s\t       5 B/op\t       0 allocs/op\nBenchmarkRead/racerand/drbg-aes-ctr/65536B\nBenchmarkRead/racerand/drbg-aes-ctr/65536B-15  \t    7724\t     40795 ns/op\t1606.48 MB/s\t      88 B/op\t       1 allocs/op\nBenchmarkRead/racerand/drbg-aes-ctr/65536B-15  \t    9182\t     41132 ns/op\t1593.32 MB/s\t      87 B/op\t       1 allocs/op\nBenchmarkRead/racerand/drbg-aes-ctr/65536B-15  \t    9806\t     46581 ns/op\t1406.91 MB/s\t      88 B/op\t       1 allocs/op\nBenchmarkRead/racerand/drbg-chacha8-osmix\nBenchmarkRead/racerand/drbg-chacha8-osmix/32B\nBenchmarkRead/racerand/drbg-chacha8-osmix/32B-15         \t 9504134\t        40.70 ns/op\t 786.30 MB/s\t       0 B/op\t       0 allocs/op\nBenchmarkRead/racerand/drbg-chacha8-osmix/32B-15         \t 9641812\t        46.46 ns/op\t 688.83 MB/s\t       0 B/op\t       0 allocs/op\nBenchmarkRead/racerand/drbg-chacha8-osmix/32B-15         \t 8077370\t        44.73 ns/op\t 715.37 MB/s\t       0 B/op\t       0 allocs/op\nBenchmarkRead/racerand/drbg-chacha8-osmix/4096B\nBenchmarkRead/racerand/drbg-chacha8-osmix/4096B-15       \t   83280\t      4828 ns/op\t 848.46 MB/s\t       1 B/op\t       0 allocs/op\nBenchmarkRead/racerand/drbg-chacha8-osmix/4096B-15       \t   83427\t      4121 ns/op\t 993.89 MB/s\t       1 B/op\t       0 allocs/op\nBenchmarkRead/racerand/drbg-chacha8-osmix/4096B-15       \t   86360\t      5372 ns/op\t 762.42 MB/s\t       1 B/op\t       0 allocs/op\nBenchmarkRead/racerand/drbg-chacha8-osmix/65536B\nBenchmarkRead/racerand/drbg-chacha8-osmix/65536B-15      \t    4128\t     84766 ns/op\t 773.14 MB/s\t      23 B/op\t       0 allocs/op\nBenchmarkRead/racerand/drbg-chacha8-osmix/65536B-15      \t    5052\t     82249 ns/op\t 796.80 MB/s\t      23 B/op\t       0 allocs/op\nBenchmarkRead/racerand/drbg-chacha8-osmix/65536B-15      \t    2468\t    125621 ns/op\t 521.69 MB/s\t      23 B/op\t       0 allocs/op\nBenchmarkRead/racerand/trng\nBenchmarkRead/racerand/trng/32B\nBenchmarkRead/racerand/trng/32B-15                       \t     991\t    335468 ns/op\t   0.10 MB/s\t       0 B/op\t       0 allocs/op\nBenchmarkRead/racerand/trng/32B-15                       \t    1056\t    334482 ns/op\t   0.10 MB/s\t       0 B/op\t       0 allocs/op\nBenchmarkRead/racerand/trng/32B-15                       \t    1076\t    324671 ns/op\t   0.10 MB/s\t       0 B/op\t       0 allocs/op\nBenchmarkRead/racerand/trng/4096B\nBenchmarkRead/racerand/trng/4096B-15                     \t       8\t  42551948 ns/op\t   0.10 MB/s\t       0 B/op\t       0 allocs/op\nBenchmarkRead/racerand/trng/4096B-15                     \t       8\t  42343990 ns/op\t   0.10 MB/s\t       0 B/op\t       0 allocs/op\nBenchmarkRead/racerand/trng/4096B-15                     \t       8\t  42337224 ns/op\t   0.10 MB/s\t       0 B/op\t       0 allocs/op\nBenchmarkRead/racerand/trng/65536B\nBenchmarkRead/racerand/trng/65536B-15                    \t       1\t 680785625 ns/op\t   0.10 MB/s\t       0 B/op\t       0 allocs/op\nBenchmarkRead/racerand/trng/65536B-15                    \t       1\t 677000500 ns/op\t   0.10 MB/s\t       0 B/op\t       0 allocs/op\nBenchmarkRead/racerand/trng/65536B-15                    \t       1\t 675927583 ns/op\t   0.10 MB/s\t       0 B/op\t       0 allocs/op\nBenchmarkRead/racerand/raw\nBenchmarkRead/racerand/raw/32B\nBenchmarkRead/racerand/raw/32B-15                        \t   36322\t     10234 ns/op\t   3.13 MB/s\t       0 B/op\t       0 allocs/op\nBenchmarkRead/racerand/raw/32B-15                        \t   35461\t     10001 ns/op\t   3.20 MB/s\t       0 B/op\t       0 allocs/op\nBenchmarkRead/racerand/raw/32B-15                        \t   33007\t     10434 ns/op\t   3.07 MB/s\t       0 B/op\t       0 allocs/op\nBenchmarkRead/racerand/raw/4096B\nBenchmarkRead/racerand/raw/4096B-15                      \t     274\t   1311039 ns/op\t   3.12 MB/s\t       0 B/op\t       0 allocs/op\nBenchmarkRead/racerand/raw/4096B-15                      \t     266\t   1348931 ns/op\t   3.04 MB/s\t       0 B/op\t       0 allocs/op\nBenchmarkRead/racerand/raw/4096B-15                      \t     261\t   1311134 ns/op\t   3.12 MB/s\t       0 B/op\t       0 allocs/op\nBenchmarkRead/racerand/raw/65536B\nBenchmarkRead/racerand/raw/65536B-15                     \t      16\t  20935435 ns/op\t   3.13 MB/s\t       0 B/op\t       0 allocs/op\nBenchmarkRead/racerand/raw/65536B-15                     \t      16\t  22350128 ns/op\t   2.93 MB/s\t       0 B/op\t       0 allocs/op\nBenchmarkRead/racerand/raw/65536B-15                     \t      15\t  21469408 ns/op\t   3.05 MB/s\t       0 B/op\t       0 allocs/op\nBenchmarkRead/racerand/raw-unsync\nBenchmarkRead/racerand/raw-unsync/32B\nBenchmarkRead/racerand/raw-unsync/32B-15                 \t   36744\t      9858 ns/op\t   3.25 MB/s\t       0 B/op\t       0 allocs/op\nBenchmarkRead/racerand/raw-unsync/32B-15                 \t   36764\t      9727 ns/op\t   3.29 MB/s\t       0 B/op\t       0 allocs/op\nBenchmarkRead/racerand/raw-unsync/32B-15                 \t   37299\t      9788 ns/op\t   3.27 MB/s\t       0 B/op\t       0 allocs/op\nBenchmarkRead/racerand/raw-unsync/4096B\nBenchmarkRead/racerand/raw-unsync/4096B-15               \t     278\t   1248110 ns/op\t   3.28 MB/s\t       0 B/op\t       0 allocs/op\nBenchmarkRead/racerand/raw-unsync/4096B-15               \t     291\t   1231609 ns/op\t   3.33 MB/s\t       0 B/op\t       0 allocs/op\nBenchmarkRead/racerand/raw-unsync/4096B-15               \t     295\t   1231172 ns/op\t   3.33 MB/s\t       0 B/op\t       0 allocs/op\nBenchmarkRead/racerand/raw-unsync/65536B\nBenchmarkRead/racerand/raw-unsync/65536B-15              \t      16\t  19971286 ns/op\t   3.28 MB/s\t       0 B/op\t       0 allocs/op\nBenchmarkRead/racerand/raw-unsync/65536B-15              \t      15\t  20274083 ns/op\t   3.23 MB/s\t       0 B/op\t       0 allocs/op\nBenchmarkRead/racerand/raw-unsync/65536B-15              \t      16\t  21726646 ns/op\t   3.02 MB/s\t       0 B/op\t       0 allocs/op\nBenchmarkRead/crypto-rand\nBenchmarkRead/crypto-rand/32B\nBenchmarkRead/crypto-rand/32B-15                         \t 2117438\t       170.0 ns/op\t 188.18 MB/s\t       0 B/op\t       0 allocs/op\nBenchmarkRead/crypto-rand/32B-15                         \t 2119029\t       170.1 ns/op\t 188.09 MB/s\t       0 B/op\t       0 allocs/op\nBenchmarkRead/crypto-rand/32B-15                         \t 2108410\t       170.7 ns/op\t 187.44 MB/s\t       0 B/op\t       0 allocs/op\nBenchmarkRead/crypto-rand/4096B\nBenchmarkRead/crypto-rand/4096B-15                       \t  454208\t       799.7 ns/op\t5121.64 MB/s\t       0 B/op\t       0 allocs/op\nBenchmarkRead/crypto-rand/4096B-15                       \t  442502\t       797.8 ns/op\t5134.07 MB/s\t       0 B/op\t       0 allocs/op\nBenchmarkRead/crypto-rand/4096B-15                       \t  452377\t       798.5 ns/op\t5129.34 MB/s\t       0 B/op\t       0 allocs/op\nBenchmarkRead/crypto-rand/65536B\nBenchmarkRead/crypto-rand/65536B-15                      \t   28794\t     12530 ns/op\t5230.41 MB/s\t       0 B/op\t       0 allocs/op\nBenchmarkRead/crypto-rand/65536B-15                      \t   28272\t     12701 ns/op\t5159.91 MB/s\t       0 B/op\t       0 allocs/op\nBenchmarkRead/crypto-rand/65536B-15                      \t   28224\t     12589 ns/op\t5205.65 MB/s\t       0 B/op\t       0 allocs/op\nBenchmarkRead/math-rand-v2-chacha8\nBenchmarkRead/math-rand-v2-chacha8/32B\nBenchmarkRead/math-rand-v2-chacha8/32B-15                \t24444273\t        14.67 ns/op\t2182.06 MB/s\t       0 B/op\t       0 allocs/op\nBenchmarkRead/math-rand-v2-chacha8/32B-15                \t24602696\t        14.70 ns/op\t2176.67 MB/s\t       0 B/op\t       0 allocs/op\nBenchmarkRead/math-rand-v2-chacha8/32B-15                \t24430519\t        14.73 ns/op\t2172.13 MB/s\t       0 B/op\t       0 allocs/op\nBenchmarkRead/math-rand-v2-chacha8/4096B\nBenchmarkRead/math-rand-v2-chacha8/4096B-15              \t  215091\t      1675 ns/op\t2444.67 MB/s\t       0 B/op\t       0 allocs/op\nBenchmarkRead/math-rand-v2-chacha8/4096B-15              \t  214899\t      1678 ns/op\t2440.58 MB/s\t       0 B/op\t       0 allocs/op\nBenchmarkRead/math-rand-v2-chacha8/4096B-15              \t  213694\t      1682 ns/op\t2435.75 MB/s\t       0 B/op\t       0 allocs/op\nBenchmarkRead/math-rand-v2-chacha8/65536B\nBenchmarkRead/math-rand-v2-chacha8/65536B-15             \t   13408\t     26848 ns/op\t2441.02 MB/s\t       0 B/op\t       0 allocs/op\nBenchmarkRead/math-rand-v2-chacha8/65536B-15             \t   13395\t     26873 ns/op\t2438.71 MB/s\t       0 B/op\t       0 allocs/op\nBenchmarkRead/math-rand-v2-chacha8/65536B-15             \t   13371\t     27001 ns/op\t2427.16 MB/s\t       0 B/op\t       0 allocs/op\nBenchmarkRead/math-rand-v1\nBenchmarkRead/math-rand-v1/32B\nBenchmarkRead/math-rand-v1/32B-15                        \t14814433\t        23.95 ns/op\t1336.08 MB/s\t       0 B/op\t       0 allocs/op\nBenchmarkRead/math-rand-v1/32B-15                        \t15225366\t        23.19 ns/op\t1380.10 MB/s\t       0 B/op\t       0 allocs/op\nBenchmarkRead/math-rand-v1/32B-15                        \t15856266\t        22.90 ns/op\t1397.65 MB/s\t       0 B/op\t       0 allocs/op\nBenchmarkRead/math-rand-v1/4096B\nBenchmarkRead/math-rand-v1/4096B-15                      \t  150116\t      2427 ns/op\t1687.34 MB/s\t       0 B/op\t       0 allocs/op\nBenchmarkRead/math-rand-v1/4096B-15                      \t  146634\t      2431 ns/op\t1684.66 MB/s\t       0 B/op\t       0 allocs/op\nBenchmarkRead/math-rand-v1/4096B-15                      \t  147744\t      2478 ns/op\t1652.74 MB/s\t       0 B/op\t       0 allocs/op\nBenchmarkRead/math-rand-v1/65536B\nBenchmarkRead/math-rand-v1/65536B-15                     \t    8742\t     40612 ns/op\t1613.72 MB/s\t       0 B/op\t       0 allocs/op\nBenchmarkRead/math-rand-v1/65536B-15                     \t    8840\t     39303 ns/op\t1667.46 MB/s\t       0 B/op\t       0 allocs/op\nBenchmarkRead/math-rand-v1/65536B-15                     \t    9190\t     38913 ns/op\t1684.15 MB/s\t       0 B/op\t       0 allocs/op\nBenchmarkUint64\nBenchmarkUint64/racerand/drbg-chacha8\nBenchmarkUint64/racerand/drbg-chacha8-15                 \t32487309\t        12.05 ns/op\t       0 B/op\t       0 allocs/op\nBenchmarkUint64/racerand/drbg-chacha8-15                 \t19922954\t        16.42 ns/op\t       0 B/op\t       0 allocs/op\nBenchmarkUint64/racerand/drbg-chacha8-15                 \t29757598\t        12.65 ns/op\t       0 B/op\t       0 allocs/op\nBenchmarkUint64/racerand/drbg-aes-ctr\nBenchmarkUint64/racerand/drbg-aes-ctr-15                 \t13741484\t        22.16 ns/op\t       0 B/op\t       0 allocs/op\nBenchmarkUint64/racerand/drbg-aes-ctr-15                 \t16302993\t        24.62 ns/op\t       0 B/op\t       0 allocs/op\nBenchmarkUint64/racerand/drbg-aes-ctr-15                 \t17493135\t        23.10 ns/op\t       0 B/op\t       0 allocs/op\nBenchmarkUint64/math-rand-v2-pcg\nBenchmarkUint64/math-rand-v2-pcg-15                      \t100000000\t         3.317 ns/op\t       0 B/op\t       0 allocs/op\nBenchmarkUint64/math-rand-v2-pcg-15                      \t100000000\t         3.213 ns/op\t       0 B/op\t       0 allocs/op\nBenchmarkUint64/math-rand-v2-pcg-15                      \t100000000\t         3.186 ns/op\t       0 B/op\t       0 allocs/op\nBenchmarkUint64/math-rand-v2-chacha8\nBenchmarkUint64/math-rand-v2-chacha8-15                  \t122693252\t         2.932 ns/op\t       0 B/op\t       0 allocs/op\nBenchmarkUint64/math-rand-v2-chacha8-15                  \t122526026\t         2.942 ns/op\t       0 B/op\t       0 allocs/op\nBenchmarkUint64/math-rand-v2-chacha8-15                  \t100000000\t         3.088 ns/op\t       0 B/op\t       0 allocs/op\nBenchmarkUint64/math-rand-v2-global\nBenchmarkUint64/math-rand-v2-global-15                   \t98486238\t         3.637 ns/op\t       0 B/op\t       0 allocs/op\nBenchmarkUint64/math-rand-v2-global-15                   \t98722556\t         3.631 ns/op\t       0 B/op\t       0 allocs/op\nBenchmarkUint64/math-rand-v2-global-15                   \t99502486\t         3.627 ns/op\t       0 B/op\t       0 allocs/op\nBenchmarkUint64/math-rand-v1\nBenchmarkUint64/math-rand-v1-15                          \t189272498\t         1.901 ns/op\t       0 B/op\t       0 allocs/op\nBenchmarkUint64/math-rand-v1-15                          \t190554957\t         1.892 ns/op\t       0 B/op\t       0 allocs/op\nBenchmarkUint64/math-rand-v1-15                          \t187545828\t         1.944 ns/op\t       0 B/op\t       0 allocs/op\nBenchmarkUint64/crypto-rand\nBenchmarkUint64/crypto-rand-15                           \t 7240370\t        50.46 ns/op\t       0 B/op\t       0 allocs/op\nBenchmarkUint64/crypto-rand-15                           \t 6907866\t        50.78 ns/op\t       0 B/op\t       0 allocs/op\nBenchmarkUint64/crypto-rand-15                           \t 6888216\t        52.62 ns/op\t       0 B/op\t       0 allocs/op\nBenchmarkHarvesterSample\nBenchmarkHarvesterSample/atomic/workers=1\nBenchmarkHarvesterSample/atomic/workers=1-15             \t 6108066\t        53.11 ns/op\t       0 B/op\t       0 allocs/op\nBenchmarkHarvesterSample/atomic/workers=1-15             \t 7072245\t        50.76 ns/op\t       0 B/op\t       0 allocs/op\nBenchmarkHarvesterSample/atomic/workers=1-15             \t 7132966\t        54.41 ns/op\t       0 B/op\t       0 allocs/op\nBenchmarkHarvesterSample/atomic/workers=2\nBenchmarkHarvesterSample/atomic/workers=2-15             \t 4806932\t        73.26 ns/op\t       0 B/op\t       0 allocs/op\nBenchmarkHarvesterSample/atomic/workers=2-15             \t 5061247\t        71.32 ns/op\t       0 B/op\t       0 allocs/op\nBenchmarkHarvesterSample/atomic/workers=2-15             \t 4696530\t        72.52 ns/op\t       0 B/op\t       0 allocs/op\nBenchmarkHarvesterSample/atomic/workers=4\nBenchmarkHarvesterSample/atomic/workers=4-15             \t 3039272\t       118.7 ns/op\t       0 B/op\t       0 allocs/op\nBenchmarkHarvesterSample/atomic/workers=4-15             \t 3021414\t       121.0 ns/op\t       0 B/op\t       0 allocs/op\nBenchmarkHarvesterSample/atomic/workers=4-15             \t 2948667\t       119.7 ns/op\t       0 B/op\t       0 allocs/op\nBenchmarkHarvesterSample/atomic/workers=default\nBenchmarkHarvesterSample/atomic/workers=default-15       \t 1000000\t       320.5 ns/op\t       0 B/op\t       0 allocs/op\nBenchmarkHarvesterSample/atomic/workers=default-15       \t 1000000\t       315.4 ns/op\t       0 B/op\t       0 allocs/op\nBenchmarkHarvesterSample/atomic/workers=default-15       \t 1000000\t       326.4 ns/op\t       0 B/op\t       0 allocs/op\nBenchmarkHarvesterSample/unsynchronized/workers=1\nBenchmarkHarvesterSample/unsynchronized/workers=1-15     \t 6938120\t        53.40 ns/op\t       0 B/op\t       0 allocs/op\nBenchmarkHarvesterSample/unsynchronized/workers=1-15     \t 6716119\t        54.00 ns/op\t       0 B/op\t       0 allocs/op\nBenchmarkHarvesterSample/unsynchronized/workers=1-15     \t 6415634\t        53.26 ns/op\t       0 B/op\t       0 allocs/op\nBenchmarkHarvesterSample/unsynchronized/workers=2\nBenchmarkHarvesterSample/unsynchronized/workers=2-15     \t 4798677\t        75.91 ns/op\t       0 B/op\t       0 allocs/op\nBenchmarkHarvesterSample/unsynchronized/workers=2-15     \t 4623915\t        77.89 ns/op\t       0 B/op\t       0 allocs/op\nBenchmarkHarvesterSample/unsynchronized/workers=2-15     \t 4631001\t        76.56 ns/op\t       0 B/op\t       0 allocs/op\nBenchmarkHarvesterSample/unsynchronized/workers=4\nBenchmarkHarvesterSample/unsynchronized/workers=4-15     \t 2720769\t       130.3 ns/op\t       0 B/op\t       0 allocs/op\nBenchmarkHarvesterSample/unsynchronized/workers=4-15     \t 2928195\t       122.6 ns/op\t       0 B/op\t       0 allocs/op\nBenchmarkHarvesterSample/unsynchronized/workers=4-15     \t 2936404\t       122.8 ns/op\t       0 B/op\t       0 allocs/op\nBenchmarkHarvesterSample/unsynchronized/workers=default\nBenchmarkHarvesterSample/unsynchronized/workers=default-15         \t 1000000\t       311.6 ns/op\t       0 B/op\t       0 allocs/op\nBenchmarkHarvesterSample/unsynchronized/workers=default-15         \t 1000000\t       306.7 ns/op\t       0 B/op\t       0 allocs/op\nBenchmarkHarvesterSample/unsynchronized/workers=default-15         \t 1000000\t       301.3 ns/op\t       0 B/op\t       0 allocs/op\nBenchmarkReseed\nBenchmarkReseed/min-entropy=0.5\nBenchmarkReseed/min-entropy=0.5-15                                 \t     390\t    863671 ns/op\t     369 B/op\t      15 allocs/op\nBenchmarkReseed/min-entropy=0.5-15                                 \t     472\t    920197 ns/op\t     372 B/op\t      15 allocs/op\nBenchmarkReseed/min-entropy=0.5-15                                 \t     319\t   1179091 ns/op\t     388 B/op\t      15 allocs/op\nBenchmarkReseed/min-entropy=2\nBenchmarkReseed/min-entropy=2-15                                   \t     781\t    469272 ns/op\t     371 B/op\t      15 allocs/op\nBenchmarkReseed/min-entropy=2-15                                   \t     829\t    516391 ns/op\t     371 B/op\t      15 allocs/op\nBenchmarkReseed/min-entropy=2-15                                   \t     615\t    586506 ns/op\t     370 B/op\t      15 allocs/op\nBenchmarkReseed/min-entropy=4\nBenchmarkReseed/min-entropy=4-15                                   \t     963\t    349105 ns/op\t     369 B/op\t      15 allocs/op\nBenchmarkReseed/min-entropy=4-15                                   \t    1171\t    392466 ns/op\t     370 B/op\t      15 allocs/op\nBenchmarkReseed/min-entropy=4-15                                   \t    1116\t    377137 ns/op\t     369 B/op\t      15 allocs/op\nBenchmarkNew\nBenchmarkNew-15                                                    \t     146\t   2403597 ns/op\t  104534 B/op\t      28 allocs/op\nBenchmarkNew-15                                                    \t     140\t   2847273 ns/op\t  106657 B/op\t      28 allocs/op\nBenchmarkNew-15                                                    \t     104\t   3220083 ns/op\t  105349 B/op\t      28 allocs/op\nBenchmarkParallelRead\nBenchmarkParallelRead/os=false/32B\nBenchmarkParallelRead/os=false/32B-15                              \t 3108584\t       117.3 ns/op\t 272.74 MB/s\t       0 B/op\t       0 allocs/op\nBenchmarkParallelRead/os=false/32B-15                              \t 2862718\t       126.2 ns/op\t 253.53 MB/s\t       0 B/op\t       0 allocs/op\nBenchmarkParallelRead/os=false/32B-15                              \t 2885475\t       127.0 ns/op\t 252.02 MB/s\t       0 B/op\t       0 allocs/op\nBenchmarkParallelRead/os=true/32B\nBenchmarkParallelRead/os=true/32B-15                               \t  778224\t       472.0 ns/op\t  67.80 MB/s\t       0 B/op\t       0 allocs/op\nBenchmarkParallelRead/os=true/32B-15                               \t  764404\t       471.0 ns/op\t  67.94 MB/s\t       0 B/op\t       0 allocs/op\nBenchmarkParallelRead/os=true/32B-15                               \t  781532\t       468.9 ns/op\t  68.25 MB/s\t       0 B/op\t       0 allocs/op\nBenchmarkParallelRead/os=false/4096B\nBenchmarkParallelRead/os=false/4096B-15                            \t   64309\t      7107 ns/op\t 576.31 MB/s\t       2 B/op\t       0 allocs/op\nBenchmarkParallelRead/os=false/4096B-15                            \t   56522\t      5545 ns/op\t 738.72 MB/s\t       2 B/op\t       0 allocs/op\nBenchmarkParallelRead/os=false/4096B-15                            \t   60446\t      6022 ns/op\t 680.18 MB/s\t       2 B/op\t       0 allocs/op\nBenchmarkParallelRead/os=true/4096B\nBenchmarkParallelRead/os=true/4096B-15                             \t  264949\t      1430 ns/op\t2864.26 MB/s\t       0 B/op\t       0 allocs/op\nBenchmarkParallelRead/os=true/4096B-15                             \t  264135\t      1421 ns/op\t2883.38 MB/s\t       0 B/op\t       0 allocs/op\nBenchmarkParallelRead/os=true/4096B-15                             \t  262477\t      1434 ns/op\t2857.04 MB/s\t       0 B/op\t       0 allocs/op\nPASS\nok  \tgithub.com/yohimik/racerand\t57.672s\n"
+}

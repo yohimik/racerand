@@ -1,0 +1,17 @@
+racerand uses only the Go standard library.
+
+Statistical definitions and numerical formulas are based on these references:
+
+- NIST SP 800-90B, Recommendation for the Entropy Sources Used for Random
+  Bit Generation (2018): https://doi.org/10.6028/NIST.SP.800-90B
+- NIST SP 800-22 Rev. 1a, A Statistical Test Suite for Random and Pseudorandom
+  Number Generators for Cryptographic Applications (2010):
+  https://doi.org/10.6028/NIST.SP.800-22r1a
+- NIST Digital Library of Mathematical Functions, sections 8.7 and 8.9:
+  https://dlmf.nist.gov/8.7 and https://dlmf.nist.gov/8.9
+- John Walker's ent describes the distribution diagnostics used for comparison:
+  https://www.fourmilab.ch/random/
+
+These references do not imply endorsement, validation, or certification.
+Jitterentropy, HAVEGE, and other projects cited in the README are related work;
+their implementations are not bundled or benchmarked here.

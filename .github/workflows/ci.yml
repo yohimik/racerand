@@ -1,0 +1,40 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    timeout-minutes: 15
+    env:
+      GOMAXPROCS: '2'
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        go: ["1.24.x", "stable"]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-go@40f1582b2485089dde7abd97c1529aa768e1baff # v5
+        with:
+          go-version: ${{ matrix.go }}
+          cache: false
+      - name: Formatting
+        shell: bash
+        run: test -z "$(gofmt -l .)"
+      - run: go vet ./...
+      - run: go test -count=1 -timeout 300s ./...
+      - run: go test -race -count=1 -timeout 600s ./...
+        if: matrix.os != 'windows-latest'
+      - name: smoke benchmarks
+        run: go test -run '^$' -bench 'BenchmarkUint64/math' -benchtime 50ms .
+      - name: quick report
+        run: go run ./cmd/racerand-bench -quick -out /dev/null -json /dev/null -noise ''
+        if: matrix.os != 'windows-latest'
