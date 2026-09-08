@@ -39,6 +39,12 @@ Linux, macOS, and Windows. Race detection also runs on Linux and macOS. See the
 repository's Actions page for actual hosted results; this file records local
 verification, not a promise that every runner produces usable noise.
 
+Hosted checks also exposed two portability issues: Windows checkout line
+endings and a timing-baseline test that assumed raw samples could never be
+constant. The repository now specifies LF text files. Reader tests check
+buffering and byte counts independently of host timer resolution; distribution
+quality remains a measurement reported by the benchmark harness.
+
 ## What these checks do not establish
 
 These checks exercise implementation behavior. They do not validate the source's

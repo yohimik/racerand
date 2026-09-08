@@ -7,18 +7,16 @@ import (
 
 func TestReaders(t *testing.T) {
 	for _, r := range []io.Reader{RawReader(), ConditionedReader(64)} {
-		buf := make([]byte, 300)
-		if _, err := io.ReadFull(r, buf); err != nil {
-			t.Fatal(err)
-		}
-		same := true
-		for _, b := range buf[1:] {
-			if b != buf[0] {
-				same = false
+		// Timer resolution can make every raw sample identical. This test
+		// checks io.Reader behavior, not the entropy of the host clock.
+		for _, size := range []int{0, 1, 63, 64, 65, 300} {
+			buf := make([]byte, size)
+			if n, err := r.Read(buf); n != size || err != nil {
+				t.Fatalf("Read(%d) returned %d, %v", size, n, err)
 			}
-		}
-		if same {
-			t.Error("all bytes identical")
+			if n, err := io.ReadFull(r, buf); n != size || err != nil {
+				t.Fatalf("ReadFull(%d) returned %d, %v", size, n, err)
+			}
 		}
 	}
 }

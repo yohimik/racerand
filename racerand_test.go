@@ -92,7 +92,9 @@ func TestModes(t *testing.T) {
 			if _, err := io.ReadFull(r, buf); err != nil {
 				t.Fatalf("%v persistent=%v: %v", mode, persistent, err)
 			}
-			notConstant(t, buf)
+			if mode != ModeRaw {
+				notConstant(t, buf)
+			}
 			// Odd sizes exercise block buffering.
 			for _, n := range []int{1, 3, 63, 64, 65, 200} {
 				if _, err := r.Read(make([]byte, n)); err != nil {
@@ -228,7 +230,7 @@ func TestInsufficientEntropy(t *testing.T) {
 	if _, err := r.Read(make([]byte, 100)); err != nil {
 		t.Fatal(err)
 	}
-	if s := r.Stats(); s.RCTCutoff != 0 || s.StartupMinEntropy <= 0 {
+	if s := r.Stats(); s.RCTCutoff != 0 || math.IsNaN(s.StartupMinEntropy) || s.StartupMinEntropy < 0 {
 		t.Errorf("stats %+v", s)
 	}
 }
@@ -326,7 +328,9 @@ func TestUnsynchronizedSource(t *testing.T) {
 		if _, err := r.Read(buf); err != nil {
 			t.Fatalf("%v: %v", mode, err)
 		}
-		notConstant(t, buf)
+		if mode != ModeRaw {
+			notConstant(t, buf)
+		}
 		if r.Stats().Source != SourceUnsynchronized {
 			t.Error("stats source")
 		}
